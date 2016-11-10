@@ -24,13 +24,254 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+                                <section>
+                                  Pitch Walt Disney Animation Studio
+                                
+                                </section>
+                                <section>
+                                  <h2>Adobe Flash</h2>
+                                  still used for web and console games, cartoons, business apps and more
+                                  <img src="./img/flash.png" alt="Flash Logo" />
+                                  
+                                  <aside class="notes">
+                                  In the early 2000s, Flash was widely installed on desktop computers, and was commonly used to display interactive web pages, online games, and to playback video and audio content.[2] In 2005, YouTube was founded by former PayPal employees, and it used Flash Player as a means to display compressed video content on the web.[2]
+                                  
+                                  </aside>
+                                 
+                                </section>
+				<section>
+				
+				Slide 1
+				How did we do animations on the web 20 years ago?
+				common nominator: Flash
+				"The use of Flash in websites is a major problem for our community."
+				Graph for flash slowly dying and image of Safari dropping the support
+				<a href="https://www.statista.com/chart/3796/websites-using-flash/" title="Infographic: Bye Bye Flash! | Statista"><img src="https://infographic.statista.com/normal/chartoftheday_3796_websites_using_flash_n.jpg" alt="Infographic: Bye Bye Flash! | Statista" width="100%" height="auto" style="width: 100%; height: auto !important; max-width:960px;-ms-interpolation-mode: bicubic;"/></a><br />You will find more statistics at <a href="https://www.statista.com/">Statista</a>
+				
+				<aside class="notes">
+				Adobe's Flash was the state-of-the-art for interactive content back when it was introduced in the 1990s. But no longer. It's been shown to eat up battery life on laptops and hurt computing performance. It's had a number of security vulnerabilities. Apple has never supported it on iOS, and Google recently started blocking all Flash ads in its Chrome browser.
+				</aside>
+				
+				</section>
+				<section>
+                                  <img src="./img/flashutube.jpg" alt="Flash and Youtube" />
+				
+				</section>
+				<section>
+				<img src="./img/flash.png" alt="Flash Logo" />
+				</section>
+                                <section>
+                                <img src="./img/flashtohtml5.jpg" alt="Flash to HTML 5 Transition" />
+                                </section>
+				<section>
+				<div class="row">
+				<div class="col s12 m6">
+				
+                                  <img src="./img/html5.png" alt="html 5" />
+				
+				</div>
+                                <div class="row">
+                                <div class="col s12 m6">
+                                <p class="fragment fade-up">valid alternative to Flash for delivering multimedia content</p>
+                                <ul>
+                                  <li class="fragment fade-up">videos</li>
+                                  <li class="fragment fade-up">audio</li>
+                                  <li class="fragment fade-up">games</li>
+                                  <li class="fragment fade-up">animations!</li>
+                                  
+                                </ul>
+
+                                
+                                </div>
+				</div>
+				<aside class="notes">
+				                                Slide 2
+                                HTML5 as the new way of doing web animations
+                                HTML5 is more than plain markup - a collective definition of all
+                                animations using open web standards on the web
+Slide 3
+                                Benefits of open web standards
+                                
+                                it's open
+                                it's free
+                                it has great compatibility in the browser landscape
+                                anyone who is into coding can use it to get started
+				</aside>
+				</section>
+                                <section>
+                                  <h2>Why bother about open web standards?</h2>
+                                  <p>using the power of consistent standards across browsers and devices using the web</p>
+                                  <img src="./img/html5support.jpg" alt="html5 support" />
+                                
+                                </section>
+                                <section>
+                                  <h2>What can we use?</h2>
+                                  <div class="row">
+                                    <div class="col s4">
+                                  <img src="./img/html5support.jpg" alt="html5 support" />
+                                    </div>
+                                    <div class="col s4">
+                                  <img src="./img/html5support.jpg" alt="html5 support" />
+                                    </div>
+                                    <div class="col s4">
+                                  <img src="./img/html5support.jpg" alt="html5 support" />
+                                    </div>
+                                  </div>
+                                </section>
+                                <section>
+                                  <h2>CSS3 Transitions</h2>
+                                  <div class="row">
+                                    <div class="col s6">
+                                    <style>
+.animation-demo-1 {
+  cursor: pointer;
+  transition: transform .6s ease-out;
+}
+
+.rotate-and-zoom-in {
+  transform: rotate(20deg) scale(4, 4);
+}
+                                    </style>
+                                      <div style="overflow: hidden; height: 10em; width: 10em;" class="frame">
+                                        <img onclick="animationDemo1(event)" style="width: 25em; height: auto; max-width: none; max-height: none; border:none; left: -80%; top: -5%; position: relative;" class="animation-demo-1" src="./img/kimface.jpg" alt="Kim Face" />
+                                      </div>
+                                    </div>
+                                    <div class="col s6">
+<pre><code>.animation-demo-1 {
+  transition: transform .6s ease-out;
+}
+
+.rotate-and-zoom-in {
+  transform: rotate(20deg) scale(2.5, 2.5);
+}
+</code></pre>
+                            
+                                    </div>
+                                  
+                                  </div>
+                                <script>
+                                  function animationDemo1(e){
+                                    jQuery(e.target).toggleClass('rotate-and-zoom-in');
+                                  }
+                                </script>
+                                <aside class="notes">
+                                Slide 4
+                                What can we us for creating web animations? Part 1
+                                
+                                - CSS3 - 
+                                transitions, and real animation definitions
+                                transition: transform rotate a face shot
+                                
+                                why transitions?
+                                
+                                Animate.css? 
+                                
+                                animate: running up and down a hill in sinus movement
+                                Example for each
+Transitioning certain properties, such as left and margin causes the browser to recalculating styles every frame. This is fairly expensive, and can lead to unnecessary re-paints, especially if you have a lot of elements on the screen. This is especially noticeable in less powerful devices, such as mobiles.
+
+This solution is to offload the rendering to the GPU using CSS transformations. In simple terms, this turns the element into an image during the transition, avoiding any style recalculations which greatly increases performance
+                                </aside>
+                                </section>
+                                <section data-state="css-2">
+                                  <h2>CSS3 Transitions</h2>
+                                  <div class="row">
+                                    <div class="col s6">
+                                    <style>
+.animation-demo-1 {
+  cursor: pointer;
+  transition: transform .6s ease-out;
+}
+
+.rotate-and-zoom-in {
+  transform: rotate(20deg) scale(4, 4);
+}
+                                    </style>
+                                      <div style="overflow: hidden; height: 10em; width: 10em;" class="frame">
+                                        <img style="width: 25em; height: auto; max-width: none; max-height: none; border:none; left: -80%; top: -5%; position: relative;" class="animation-demo-1" src="./img/kimface.jpg" alt="Kim Face" />
+                                      </div>
+                                    </div>
+                                                                    <script>
+                                  function animationDemo2(){
+                                    window.setTimeout(function(){ jQuery('.animation-demo-1').toggleClass('rotate-and-zoom-in');}, 1200);
+                                  };
+                                </script>
+                                    <div class="col s6">
+                                      <ul>
+                                        <li class="fragment fade-up">Diverse set of animations to choose from</li>
+                                        <li class="fragment fade-up">Easy access with class binding and libraries, e.g. <strong>animate.css</strong></li>
+                                        <li class="fragment fade-up">super-cheap in the browser!</li>
+                                      </ul>
+                            
+                                    </div>
+                                  
+                                  </div>
+                                </section>
+                                <section>
+                                 Slide 5
+                                 
+                                 JavaScript
+                                 Lots of libraries out there to help with this
+                                 
+                                 show slides with overflowing logos of all the js libraries
+                                 
+                                 jQuery, D3.js, animate.css, velocity (similar to jquery animate or gs), processing.js 
+                                </section>
+                                <section>
+                                  Slide 6
+                                  
+                                  Greensock Logo and cool catch slogan
+                                  
+                                 "[...] GSAP is packed with features that make most other engines look like cheap toys".
+                                </section>
+                                <section>
+                                Tweens
+                                
+                                -- code -- 
+                                
+                                 Timeline
+<pre><code>
+                                 //instantiate a TimelineLite    
+var tl = new TimelineLite();
+
+//add a from() tween at the beginning of the timline
+tl.from(head, 0.5, {left:100, opacity:0});
+
+//add another tween immediately after
+tl.from(subhead, 0.5, {left:-100, opacity:0});
+</pre></code>
+
+                                </section>
+                                <section>Slide 7
+                                
+                                Greensock Timeline Demo with code and working animation
+                                
+                                </section>
+                                <section>Slide 8
+                                
+                                GreenSock Hook into Ember.js - movie slider or scroll slider?!
+                                </section>
+                                <section>Slide 9
+                                
+                                Processingjs Logo and cool catch slogan
+                                
+                                It's not magic, but almost.
+                                </section>
+                                <section>
+                                
+                                Slide 10
+                                
+                                Processing js Brain Animation
+                                show how to hook into emberjs as pure js code or if you manage how to precompile the
+                                processing code
+                                </section>
 			</div>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
+		<script src="plugin/jquery/jquery.min.js"></script>
+		<script src="plugin/materialize/materialize.min.js"></script>
 
 		<script>
 			// More info https://github.com/hakimel/reveal.js#configuration
@@ -43,8 +284,13 @@
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					
 				]
 			});
 		</script>
+              <script>
+                Reveal.addEventListener('css-2', animationDemo2, false);
+              
+              </script>
 	</body>
 </html>
