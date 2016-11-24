@@ -7635,3 +7635,11 @@ body {
   width: auto !important;
   max-width: none;
   max-height: none; }
+
+.reveal section img {
+  max-height: 12em;
+  width: auto; }
+
+.reveal .subtitle {
+  font-size: .4em;
+  font-weight: 200; }

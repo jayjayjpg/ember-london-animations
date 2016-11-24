@@ -33,6 +33,15 @@
         max-height: none;
       }
     }
+    img {
+      max-height: 12em;
+      width: auto;
+    }
   }
 
+  
+  .subtitle {
+    font-size: .4em;
+    font-weight: 200;
+  }
 }
